@@ -1,0 +1,7 @@
+Running: xsim.dir/Fg_AKA_tb_behav/xsimk.exe -simmode gui -wdb Fg_AKA_tb_behav.wdb -simrunnum 0 -socket 64019
+Design successfully loaded
+Design Loading Memory Usage: 26632 KB (Peak: 26632 KB)
+Design Loading CPU Usage: 1406 ms
+Simulation completed
+Simulation Memory Usage: 27452 KB (Peak: 27452 KB)
+Simulation CPU Usage: 1499 ms

@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../5GAKA.srcs/sources_1/new/Buff.vhd" \
+"../../../../5GAKA.srcs/sources_1/new/Copc.vhd" \
+"../../../../5GAKA.srcs/sources_1/new/Fg_AKA.vhd" \
+"../../../../5GAKA.srcs/sources_1/imports/new/HMAC.vhd" \
+"../../../../5GAKA.srcs/sources_1/imports/new/SHA256.vhd" \
+"../../../../5GAKA.srcs/sources_1/new/demux4to1_256.vhd" \
+"../../../../5GAKA.srcs/sources_1/new/mux2to1_256.vhd" \
+"../../../../5GAKA.srcs/sources_1/new/mux4to1_256.vhd" \
+"../../../../5GAKA.srcs/sim_1/new/Fg_AKA_tb.vhd" \
+
+# Do not sort compile order
+nosort

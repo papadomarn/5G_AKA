@@ -1,0 +1,358 @@
+#-----------------------------------------------------------
+# Vivado v2024.2.1 (64-bit)
+# SW Build 5266912 on Sun Dec 15 09:03:24 MST 2024
+# IP Build 5264866 on Sun Dec 15 16:27:47 MST 2024
+# SharedData Build 5264680 on Wed Dec 11 12:48:36 MST 2024
+# Start of session at: Tue Apr 15 16:31:06 2025
+# Process ID         : 2232
+# Current directory  : F:/HDLProjects/5GAKA
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent9968 F:\HDLProjects\5GAKA\5GAKA.xpr
+# Log file           : F:/HDLProjects/5GAKA/vivado.log
+# Journal file       : F:/HDLProjects/5GAKA\vivado.jou
+# Running On         : Ifestos2
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i7 CPU         970  @ 3.20GHz
+# CPU Frequency      : 3208 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 12875 MB
+# Swap memory        : 1946 MB
+# Total Virtual      : 14821 MB
+# Available Virtual  : 7523 MB
+#-----------------------------------------------------------
+start_gui
+open_project F:/HDLProjects/5GAKA/5GAKA.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'F:/HDLProjects/5GAKA/5GAKA.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+open_project: Time (s): cpu = 00:00:38 ; elapsed = 00:00:17 . Memory (MB): peak = 1603.734 ; gain = 404.773
+update_compile_order -fileset sources_1
+synth_design -top Fg_AKA -part xc7z020clg484-1 -lint 
+Command: synth_design -top Fg_AKA -part xc7z020clg484-1 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 4896
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2106.328 ; gain = 424.680
+---------------------------------------------------------------------------------
+Clean up Linter database...
+INFO: [Synth 8-638] synthesizing module 'Fg_AKA' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:50]
+INFO: [Synth 8-3491] module 'Copc' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Copc.vhd:34' bound to instance 'c1' of component 'Copc' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'Copc' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Copc.vhd:44]
+INFO: [Synth 8-3491] module 'HMAC' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/HMAC.vhd:28' bound to instance 'pmap1' of component 'HMAC' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Copc.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'HMAC' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/HMAC.vhd:40]
+INFO: [Synth 8-3491] module 'SHA256' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd:26' bound to instance 'c1' of component 'SHA256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/HMAC.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'SHA256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'SHA256' (1#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd:31]
+INFO: [Synth 8-3491] module 'SHA256' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd:26' bound to instance 'c2' of component 'SHA256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/HMAC.vhd:77]
+INFO: [Synth 8-256] done synthesizing module 'HMAC' (2#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/HMAC.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Copc' (3#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Copc.vhd:44]
+INFO: [Synth 8-3491] module 'HMAC' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/HMAC.vhd:28' bound to instance 'h1' of component 'HMAC' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:160]
+INFO: [Synth 8-3491] module 'mux4to1_256' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux4to1_256.vhd:25' bound to instance 'MX1' of component 'mux4to1_256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'mux4to1_256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux4to1_256.vhd:36]
+INFO: [Synth 8-226] default block is never used [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux4to1_256.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'mux4to1_256' (4#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux4to1_256.vhd:36]
+INFO: [Synth 8-3491] module 'demux4to1_256' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/demux4to1_256.vhd:24' bound to instance 'DM1' of component 'demux4to1_256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'demux4to1_256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/demux4to1_256.vhd:35]
+INFO: [Synth 8-226] default block is never used [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/demux4to1_256.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'demux4to1_256' (5#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/demux4to1_256.vhd:35]
+INFO: [Synth 8-3491] module 'mux4to1_256' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux4to1_256.vhd:25' bound to instance 'MX2' of component 'mux4to1_256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:177]
+INFO: [Synth 8-3491] module 'mux2to1_256' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux2to1_256.vhd:25' bound to instance 'MX3' of component 'mux2to1_256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:179]
+INFO: [Synth 8-638] synthesizing module 'mux2to1_256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux2to1_256.vhd:34]
+INFO: [Synth 8-226] default block is never used [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux2to1_256.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'mux2to1_256' (6#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux2to1_256.vhd:34]
+INFO: [Synth 8-3491] module 'HMAC' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/HMAC.vhd:28' bound to instance 'h2' of component 'HMAC' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:180]
+INFO: [Synth 8-3491] module 'buff' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Buff.vhd:25' bound to instance 'buf' of component 'buff' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:182]
+INFO: [Synth 8-638] synthesizing module 'buff' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Buff.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'buff' (7#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Buff.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'Fg_AKA' (8#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:50]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2238.195 ; gain = 556.547
+---------------------------------------------------------------------------------
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2.1 (win64) Build 5266912 Sun Dec 15 09:03:24 MST 2024
+| Date         : Tue Apr 15 16:32:30 2025
+| Host         : Ifestos2 running 64-bit major release  (build 9200)
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+RTL Linter Report
+
+Table of Contents
+-----------------
+1. Summary
+
+1. Summary
+----------
+
++-----------+----------+--------------+----------+
+| Rule ID   | Severity | # Violations | # Waived |
++-----------+----------+--------------+----------+
+| ASSIGN-5  | WARNING  | 2            | 0        |
+| ASSIGN-6  | WARNING  | 3            | 0        |
+| ASSIGN-10 | WARNING  | 1            | 0        |
+| RESET-2   | WARNING  | 81           | 0        |
++-----------+----------+--------------+----------+
+
+
+WARNING: [Synth 37-93] [ASSIGN-6]Signal 'SC1' was assigned but not read. 
+RTL Name 'SC1', Hierarchy 'Fg_AKA', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd', Line 76.
+WARNING: [Synth 37-93] [ASSIGN-6]Signal 'ZEROPAD' was assigned but not read. 
+RTL Name 'ZEROPAD', Hierarchy 'Fg_AKA', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd', Line 53.
+WARNING: [Synth 37-93] [ASSIGN-6]Signal 'ZEROPAD2' was assigned but not read. 
+RTL Name 'ZEROPAD2', Hierarchy 'Fg_AKA', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd', Line 54.
+WARNING: [Synth 37-124] [ASSIGN-5]Some bits in 'inner_hash' are not set. First unset bit index is 0. 
+RTL Name 'inner_hash', Hierarchy 'HMAC', File 'HMAC.vhd', Line 42.
+WARNING: [Synth 37-124] [ASSIGN-5]Some bits in 'outer_hash' are not set. First unset bit index is 0. 
+RTL Name 'outer_hash', Hierarchy 'HMAC', File 'HMAC.vhd', Line 43.
+WARNING: [Synth 37-125] [ASSIGN-10]Some bits in IO 'hmac_start' are not read. First unread bit index is 0. 
+RTL Name 'hmac_start', Hierarchy 'HMAC', File 'HMAC.vhd', Line 34.
+WARNING: [Synth 37-103] [RESET-2]Register a_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'a_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register b_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'b_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register c_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'c_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register d_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'd_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register e_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'e_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register f_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'f_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register g_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'g_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register h0_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'h0_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register h1_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'h1_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register h2_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'h2_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register h3_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'h3_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register h4_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'h4_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register h5_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'h5_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register h6_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'h6_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register h7_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'h7_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register h_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'h_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register p1.i_reg in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'p1.i_reg', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[0] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[0]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[10] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[10]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[11] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[11]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[12] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[12]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[13] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[13]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[14] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[14]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[15] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[15]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[16] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[16]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[17] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[17]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[18] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[18]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[19] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[19]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[1] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[1]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[20] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[20]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[21] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[21]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[22] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[22]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[23] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[23]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[24] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[24]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[25] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[25]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[26] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[26]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[27] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[27]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[28] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[28]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[29] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[29]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[2] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[2]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[30] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[30]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[31] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[31]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[32] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[32]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[33] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[33]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[34] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[34]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[35] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[35]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[36] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[36]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[37] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[37]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[38] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[38]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[39] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[39]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[3] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[3]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[40] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[40]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[41] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[41]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[42] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[42]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[43] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[43]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[44] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[44]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[45] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[45]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[46] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[46]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[47] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[47]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[48] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[48]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[49] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[49]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[4] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[4]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[50] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[50]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[51] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[51]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[52] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[52]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[53] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[53]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[54] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[54]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[55] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[55]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[56] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[56]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[57] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[57]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[58] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[58]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[59] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[59]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[5] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[5]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[60] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[60]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[61] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[61]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[62] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[62]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[63] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[63]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[6] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[6]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[7] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[7]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[8] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[8]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+WARNING: [Synth 37-103] [RESET-2]Register w_reg[9] in always/process block does not have asynchronous reset when one or more other signals do.
+RTL Name 'w_reg[9]', Hierarchy 'SHA256', File 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd', Line 97.
+INFO: [Synth 37-85] Total of 87 linter message(s) generated.
+INFO: [Synth 37-45] Linter Run Finished!
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2238.195 ; gain = 556.547
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 87 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2238.195 ; gain = 575.324
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg484-1
+Top: Fg_AKA
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2352.156 ; gain = 81.371
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Fg_AKA' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:50]
+INFO: [Synth 8-3491] module 'Copc' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Copc.vhd:34' bound to instance 'c1' of component 'Copc' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'Copc' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Copc.vhd:44]
+INFO: [Synth 8-3491] module 'HMAC' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/HMAC.vhd:28' bound to instance 'pmap1' of component 'HMAC' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Copc.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'HMAC' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/HMAC.vhd:40]
+INFO: [Synth 8-3491] module 'SHA256' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd:26' bound to instance 'c1' of component 'SHA256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/HMAC.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'SHA256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'SHA256' (0#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd:31]
+INFO: [Synth 8-3491] module 'SHA256' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/SHA256.vhd:26' bound to instance 'c2' of component 'SHA256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/HMAC.vhd:77]
+INFO: [Synth 8-256] done synthesizing module 'HMAC' (0#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/HMAC.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Copc' (0#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Copc.vhd:44]
+INFO: [Synth 8-3491] module 'HMAC' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/HMAC.vhd:28' bound to instance 'h1' of component 'HMAC' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:160]
+INFO: [Synth 8-3491] module 'mux4to1_256' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux4to1_256.vhd:25' bound to instance 'MX1' of component 'mux4to1_256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'mux4to1_256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux4to1_256.vhd:36]
+INFO: [Synth 8-226] default block is never used [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux4to1_256.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'mux4to1_256' (0#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux4to1_256.vhd:36]
+INFO: [Synth 8-3491] module 'demux4to1_256' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/demux4to1_256.vhd:24' bound to instance 'DM1' of component 'demux4to1_256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'demux4to1_256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/demux4to1_256.vhd:35]
+INFO: [Synth 8-226] default block is never used [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/demux4to1_256.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'demux4to1_256' (0#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/demux4to1_256.vhd:35]
+INFO: [Synth 8-3491] module 'mux4to1_256' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux4to1_256.vhd:25' bound to instance 'MX2' of component 'mux4to1_256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:177]
+INFO: [Synth 8-3491] module 'mux2to1_256' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux2to1_256.vhd:25' bound to instance 'MX3' of component 'mux2to1_256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:179]
+INFO: [Synth 8-638] synthesizing module 'mux2to1_256' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux2to1_256.vhd:34]
+INFO: [Synth 8-226] default block is never used [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux2to1_256.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'mux2to1_256' (0#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/mux2to1_256.vhd:34]
+INFO: [Synth 8-3491] module 'HMAC' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/imports/new/HMAC.vhd:28' bound to instance 'h2' of component 'HMAC' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:180]
+INFO: [Synth 8-3491] module 'buff' declared at 'F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Buff.vhd:25' bound to instance 'buf' of component 'buff' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:182]
+INFO: [Synth 8-638] synthesizing module 'buff' [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Buff.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'buff' (0#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Buff.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'Fg_AKA' (0#1) [F:/HDLProjects/5GAKA/5GAKA.srcs/sources_1/new/Fg_AKA.vhd:50]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 2482.031 ; gain = 211.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 2482.031 ; gain = 211.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 2482.031 ; gain = 211.246
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.501 . Memory (MB): peak = 2482.031 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2605.887 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:44 ; elapsed = 00:00:30 . Memory (MB): peak = 2874.176 ; gain = 603.391
+34 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:46 . Memory (MB): peak = 2874.176 ; gain = 635.980
+close_design
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 15 16:34:20 2025...
